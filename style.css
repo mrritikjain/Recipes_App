@@ -1,0 +1,78 @@
+* {
+  margin: 0;
+  padding: 0px;
+  box-sizing: border-box;
+}
+body {
+  width: 100vw;
+  min-height: 600px;
+  overflow-x: hidden;
+}
+header {
+  display: flex;
+  padding: 20px 30px;
+  justify-content: space-between;
+  background-color: orange;
+  color: #fff;
+}
+.logo h2 {
+  font-family: cursive;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+#input-box {
+  padding: 10px;
+  border: none;
+  width: 250px;
+  border-radius: 5px;
+}
+#search {
+  background-color: #000;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.main-container {
+  width: 100%;
+  display: flex;
+}
+.sidebar {
+  width: 15%;
+  background-color: rgb(156 156 156 / 57%);
+  padding-top: 20px;
+}
+.sidebar ul {
+  padding: 10px 30px;
+  margin: auto;
+}
+.sidebar ul li {
+  margin-bottom: 40px;
+  color: #fff;
+  text-transform: uppercase;
+  background-color: orange;
+  padding: 10px;
+  list-style: none;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: 300ms;
+  letter-spacing: 2px;
+  text-align: center;
+}
+.sidebar ul li:hover {
+  background-color: transparent;
+  border: 1px solid #000;
+  color: #000;
+  transform: scale(1.1);
+  text-align: center;
+}
+#listing {
+  width: 80%;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20px;
+}
+.card{padding: 10px;
+height: fit-content;}

@@ -7,6 +7,7 @@ body {
   width: 100vw;
   min-height: 600px;
   overflow-x: hidden;
+  background-color: #000;
 }
 header {
   display: flex;
@@ -38,41 +39,15 @@ header {
 .main-container {
   width: 100%;
   display: flex;
-}
-.sidebar {
-  width: 15%;
-  background-color: rgb(156 156 156 / 57%);
-  padding-top: 20px;
-}
-.sidebar ul {
-  padding: 10px 30px;
-  margin: auto;
-}
-.sidebar ul li {
-  margin-bottom: 40px;
-  color: #fff;
-  text-transform: uppercase;
-  background-color: orange;
-  padding: 10px;
-  list-style: none;
-  border-radius: 20px;
-  cursor: pointer;
-  transition: 300ms;
-  letter-spacing: 2px;
-  text-align: center;
-}
-.sidebar ul li:hover {
-  background-color: transparent;
-  border: 1px solid #000;
-  color: #000;
-  transform: scale(1.1);
-  text-align: center;
-}
-#listing {
-  width: 80%;
-  display: flex;
-  flex-wrap: wrap;
   padding: 20px;
+  gap: 20px 10px;
+  flex-wrap: wrap;
+  justify-content: center;
 }
-.card{padding: 10px;
-height: fit-content;}
+.card {
+  padding: 10px;
+  height: 300px;
+  width: 200px;
+  background-color: red;
+  border-radius: 10px;
+}

@@ -1,6 +1,7 @@
 let input = document.getElementById("input-box");
 let loading = document.getElementById("loading");
 let container = document.querySelector(".main-container");
+let searchResult = document.querySelector(".search-result");
 function debounc(delay) {
   let timer;
   return function (callback) {
@@ -14,6 +15,7 @@ let debouncing = debounc(300);
 async function fetchRecipe(query) {
   if (!query) {
     container.innerHTML = "";
+    searchResult.innerHTML = "";
     return;
   }
   try {
@@ -24,7 +26,7 @@ async function fetchRecipe(query) {
     let data = await res.json();
     if (!data.meals) {
       container.innerHTML = "<p style=color:#fff>No results found</p>";
-      searchresult.innerHTML = "";
+      searchResult.innerHTML = "<p style=color:#fff>No results found</p>";
       return;
     }
     renderRecipe(data.meals);
@@ -37,7 +39,7 @@ async function fetchRecipe(query) {
 
 function renderRecipe(recipes) {
   container.innerHTML = "";
-
+  searchResult.innerHTML = "";
   recipes.slice(0, 12).forEach((recipe) => {
     const card = document.createElement("div");
     card.classList.add("card");
@@ -47,6 +49,10 @@ function renderRecipe(recipes) {
    <p><b>Category : </b>${recipe.strCategory}</p>
    <p><b>Area: </b>${recipe.strArea}</p></div>`;
     container.appendChild(card);
+
+    const li = document.createElement("li");
+    li.innerHTML = recipe.strMeal;
+    searchResult.appendChild(li);
   });
 }
 

@@ -27,6 +27,7 @@ header {
   border: none;
   width: 250px;
   border-radius: 5px;
+  position: relative;
 }
 #search {
   background-color: #000;
@@ -36,7 +37,19 @@ header {
   border-radius: 5px;
   cursor: pointer;
 }
-
+.search-result {
+  color: #fff;
+  z-index: 99;
+  position: absolute;
+  width: 250px;
+  margin-top: 5px;
+}
+.search-result li {
+  list-style-type: none;
+  margin-bottom: 2px;
+  background-color: rgba(29, 29, 29, 0.834);
+  padding: 5px 10px;
+}
 .main-container {
   width: 100%;
   display: flex;

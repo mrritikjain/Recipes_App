@@ -101,3 +101,7 @@ footer {
     transform: rotate(360deg);
   }
 }
+
+.search-result li.active {
+  background-color: orange;
+}
